@@ -1,0 +1,9 @@
+[26-07-2020] 
+>> Puesto que no hemos hecho una web en la vida, he decidido que vamos a tomar como estructura de carpetas la que usan aquí: https://medium.com/@nmayurashok/file-and-folder-structure-for-web-development-8c5c83810a5.
+>> Vamos a utilizar nodejs, npm y demas compañia...por que...por que no veo por que no XD el archivo package.json lo iremos completando segun sepamos que estamos haciendo. Por ahora (despues de instalar node y npm) ejecutad "npm i" dentro de la carpeta donde esta package.json para que se os instalen las dependencias :3
+>> Expliquemos los archivos para que nadie se pierda (que soy el primero que no tiene ni puta idea de que coño esta haciendo)
+  # package.json: archivo de config con las dependencias que necesita nuestro proyecto. Para añadir dependencias lo ideal es usar el comando "npm install -P <paquete>" si la dependencia es necesaria para cuando el proyecto este terminado. Y usad "npm install -D <paquete>" para cuando la dependencia sea solo necesaria a la hora de desarrollar la web. Por lo demas este archivo lo tocaremos bien poco.
+  # bs-config: Para ejecutar el proyecto utilizamos el comando "npm test" el cual ejecuta un mini servidor local llamado "lite-server" instalado con "npm i" (esta en las dependencias). El archivo de config del server es bs-config
+  # package-lock.json: generado automaticamente y cambia con el tiempo segun npm va haciendo cambios al proyecto
+  # node_modules: carpeta que esta en el gitignore y basicamente tiene modulos de npm :3 y segun añadamos dependencias se iran añadiendo paquetes a la carpeta
+  # src: carpeta con el proyecto, mirad la web del punto anterior pero vamos...carpetas para el proyecto, nos sobrarán seguramente pero
