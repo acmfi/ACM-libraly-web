@@ -1,59 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ACM Library</title>
-  <link rel="shortcut icon" type="image/jpg" href="/favicon.ico">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ACM Library</title>
+    <link rel="shortcut icon" type="image/jpg" href="/favicon.ico">
 
-  <!-- FONT AWESOME -->
-  <!-- cdnsjs nos permite añadir iconos y demas sin descargarlos :D -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
-  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">
+    <!-- FONT AWESOME -->
+    <!-- cdnsjs nos permite añadir iconos y demas sin descargarlos :D -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">
 
-  <!-- CUSTOM CSS -->
-  <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="css/styles.css">
+  </head>
+  <body>
 
-<!-- container nos proporciona igualdad en margenes, alineamiento etc... en etiquetas como div, section, header, footer... -->
-<div class="container"> 
-  <!-- nav representa una seccion para navegar por links a la misma página o otras -->
-  <nav class="nav-main">
-    <img src="img/acm_logo.png" alt="ACM LOGO" class="nav-logo">
+    <!-- Menu de navegación en escritorio -->
+    <div class="nav"> 
 
-    <!-- ul representa elemntos desordenador y cada li es un elemento -->
-    <ul class="nav-menu">
-      <li>
-        <a href="#">Link 1</a>
-      </li>
-      <li>
-        <a href="#">Link 2</a>
-      </li>
-      <li>
-        <a href="#">Link 3</a>
-      </li>
-    </ul>
+      <div class="nav-logo">
+	<img src="img/acm_logo.png" alt="ACM LOGO" class="nav-img">
+	<h1>Library</h1>
+      </div>
+      <ul class="nav-links">
+	<li>
+	  <a href="#">Catalog</a>
+	</li>
+	<li>
+	  <a href="#">News</a>
+	</li>
+	<li>
+	  <a href="#">About us</a>
+	</li>
+      </ul>
+      
+      <ul class="nav-menu-right">
+	<a href="#">
+	  <i class="fas fa-search"></i>
+	</a>
+      </ul>
+    </div>
 
-    <ul class="nav-menu-right">
-      <a href="#">
-        <!-- i es de icono, y fa-search sale del paquete de iconos de font awesome -->
-        <i class="fas fa-search"></i>
-      </a>
-    </ul>
-  </nav>
+    <hr>
 
-  <hr>
+    <!-- Menu de navegacion en móvil -->
+    <div class="burger">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+    </div>
 
-  <!-- Pantalla Principal :D Se borarrá seguramente XD -->
-  <header class="showcase">
-    <h2>Bienvenido a la Libreria de ACM</h2>
-    <p>
-      Soy un texto de prueba y aqui deberiamos poner una descripción de algo sobre al biblioteca :D
-    </p>
-    <a href="#">Soy un link que no sirve para nada :D <i class="fas fa-angle-double-right"></i></a>
-  </header>
-</div>
-  
-</body>
+  </body>
 </html>
