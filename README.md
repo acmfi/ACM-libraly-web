@@ -4,4 +4,4 @@ Iré poniendo los cambios que vaya haciendo y las distintas ideas que se me ocur
 
 ## Primera aproximación a la barra superior
 
-![primera-barra]{primera-barra.png}
+![primera-barra](primera-barra.png)
