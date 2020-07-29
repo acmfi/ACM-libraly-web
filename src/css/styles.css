@@ -67,9 +67,66 @@ ul{
 }
 
 /* Pantalla Principal (la de bienvenida) */  
-.showcase{
-  width: 100%;
-  height: 550px;
+hr{
+  margin: 10px 0px;
 }
 
+.showcase{
+  width: 100%;
+  height: 350px;
+  padding-bottom: 50px; /* Para dejar espacio por debajo para otros elementos */
+  display: flex;
+  flex-direction: column; /* Elementos en columna pegado a la izq */
+  align-items: center;
+  background: url("../img/showcase.jpg") no-repeat center center/cover;
+
+}
+
+.btn{
+  cursor: pointer; /* Esto hace que el cursor cambie cuando esta ecima del boton */
+  display: inline-block; 
+  border: 0;
+  font-weigth: bold;
+  padding: 10px 20px;
+  background: #72f9ff;
+  color: black;
+  font-size: 15px;
+  border: 1px solid #ffffff;
+  margin: 10px;
+}
+
+.btn:hover{
+  opacity: .7;
+}
+
+.showcase h2,
+.showcase p{
+  margin-bottom: 10px;
+}
+
+/* Redes Sociales */
+.socialMedia{
+  margin: 50px;
+}
+
+.socialMedia p{
+  text-align: center;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.links{
+  font-size: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.links a{
+  margin: 0 20px;
+}
+
+.links a i{
+  font-size: 3rend;
+}
 
