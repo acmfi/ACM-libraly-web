@@ -2,4 +2,4 @@
 Se que es Library, pero hay que mantener la consistencia con las erratas
 
 ## Primera Vista
-![captura](/carpetaBasura/captura.png)
+![captura](readme_pics/captura.png)
