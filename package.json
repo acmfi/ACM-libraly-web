@@ -1,19 +1,25 @@
 {
-  "name": "ACM-libraly-web",
+  "name": "acm-libraly-web",
   "version": "1.0.0",
-  "description": "Web app to manage ACM-UPM library.",
+  "description": "ACM library management web server.",
+  "main": "app.js",
   "scripts": {
-    "test": "lite-server"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Libraly-Dev",
-  "devDependencies": {
-    "lite-server": "^2.5.4"
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acmfi/ACM-libraly-web.git"
   },
-  "browserlist": {
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "author": "ACM Libraly-Dev Team",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/acmfi/ACM-libraly-web/issues"
+  },
+  "homepage": "https://github.com/acmfi/ACM-libraly-web#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "request": "^2.88.2"
   }
 }
