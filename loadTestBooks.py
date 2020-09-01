@@ -75,7 +75,7 @@ books = [{
 	    "publisher": "Editorial_10"
         },
         {
-            "ISBN": 9783362781138,
+            "ISBN": 9786629631917,
 	    "title": "TituloRepe",
 	    "author": "AutorTitRepe_1",
 	    "edition": 1,
@@ -93,7 +93,12 @@ books = [{
 count = 0
 for x in books:
     res = requests.post(url, json = x)
-    if(res.status_code != 200):
+    if(res.status_code < 200 or res.status_code >= 300):
         print("Book", count, ":", res.text)
+    else:
+        print("Book", count, ": All gucci!")
     count += 1
 
+url = 'http://localhost:4000/api/books/armadilloPuesNose'
+res = requests.get(url)
+print(res.status_code)
