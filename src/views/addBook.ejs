@@ -17,7 +17,6 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
   </head>
 
-
   <body>
 
     <header>
@@ -53,28 +52,22 @@
 </svg>
             <strong>ACM Library</strong>
           </a>
-          <a href="/addBook" class="navbar-brand d-flex align-items-center">
-            <strong>Añadir Libro</strong>
-          </a>
+          <a class="navbar-brand d-flex align-items-center">
+            <strong>Add a Book</strong>
         </div>
       </div>
     </header>
 
-    <div class="container">
+    <div class="container_input">
       <fieldset>
-        <form action="/" method="post">
-          <input name="book" type="text" class="ghost-input" placeholder="Nombre o ISBN del Libro" required>
-          <input type="submit" class="ghost-button" value="Buscar">
+        <form action="/addBook" method="post">
+          <input name="book" type="text" class="ghost-input" placeholder="ISBN" required>
+          <input name="book" type="text" class="ghost-input" placeholder="Titulo" required>
+          <input name="book" type="text" class="ghost-input" placeholder="Autor" required>
+          <input name="book" type="text" class="ghost-input" placeholder="Edición" required>
+          <input name="book" type="text" class="ghost-input" placeholder="Editorial" required>
+          <input type="submit" class="ghost-button" value="Añadir Libro">
         </form>
-
-        <!-- EJS -->
-        <% if(book !== null){ %>
-        <p><%= book %></p>
-        <% } %>
-
-        <% if(error !== null){ %>
-        <p><%= error %></p>
-        <% } %>
 
       </fieldset>
     </div>
