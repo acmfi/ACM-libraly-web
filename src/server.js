@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const fetch = require('node-fetch')
+const request = require('request')
 
 const app = express();
 
@@ -10,6 +11,10 @@ app.use(bodyParser.urlencoded({extended:true}));
 
 app.get('/', function (req, res) {
   res.render('index', {book: null, error: null})
+});
+
+app.get('/addBook', function (req, res) {
+  res.render('addBook');
 });
 
 app.listen(3000, function () {
@@ -23,7 +28,7 @@ app.post('/', function (req, res) {
   let isISBN = book.match(/^(97(8|9))?\d{9}(\d|X)$/)
 
   fetch(url, {
-    methos: "get"
+    method: "GET"
   })
     .then(response => {
       if (response.ok) {
@@ -42,6 +47,36 @@ app.post('/', function (req, res) {
         res.render('index', {book: bookInfo, error: null})
       }
     })
-  .catch(error => console.log('error is', error));
+    .catch(error => console.log('error is', error));
+});
+
+app.post('/addBook', function (req, res) {
+
+  let book = req.body.book;
+  let url = 'http://localhost:4000/api/books/add_book';
+
+  isbn_number = parseInt(book[0]);
+  edition_number = parseInt(book[3]);
+
+  const dataToSend = {
+    url: url,
+    json: true,
+    body: {
+      "ISBN": isbn_number,
+      "title": book[1],
+      "author": book[2],
+      "edition": edition_number,
+      "publisher": book[4]
+    }
+  };
+
+  request.post(dataToSend, (err, res, body) => {
+    if(err){
+      return console.log(err);
+    }
+
+    console.log(`Status: ${res.statusCode}`);
+    console.log(body);
+  });
 });
 
