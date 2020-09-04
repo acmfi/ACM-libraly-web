@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const fetch = require('node-fetch')
+const request = require('request')
 
 const app = express();
 
@@ -54,31 +55,28 @@ app.post('/addBook', function (req, res) {
   let book = req.body.book;
   let url = 'http://localhost:4000/api/books/add_book';
 
-  const dataToSend = JSON.stringify({
-      "isbn" : book[0],
-      "titulo" : book[1],
-      "autor" : book[2],
-      "edicion" : book[3],
-      "editorial" : book[4]
-    })
+  isbn_number = parseInt(book[0]);
+  edition_number = parseInt(book[3]);
 
+  const dataToSend = {
+    url: url,
+    json: true,
+    body: {
+      "ISBN": isbn_number,
+      "title": book[1],
+      "author": book[2],
+      "edition": edition_number,
+      "publisher": book[4]
+    }
+  };
 
-  fetch(url, {
-    headers: { "Content-Type": "application/json" },
-    method: "post",
-    body: dataToSend
-  })
-    .then(response => {
-      if (response.ok) {
-        return response.json()
-      } else {
-        res.render('index', {book: null, error: 'Error: No se que ha ido mal :D'});
-      }
-    })
-    .then(data => {
-      res.render('index', {book: null, error: null})
-      console.log(data)
-    })
-    .catch(error => console.log('error is', error));
+  request.post(dataToSend, (err, res, body) => {
+    if(err){
+      return console.log(err);
+    }
+
+    console.log(`Status: ${res.statusCode}`);
+    console.log(body);
+  });
 });
 
