@@ -10,7 +10,7 @@ app.use(express.static('public'));
 app.use(bodyParser.urlencoded({extended:true}));
 
 app.get('/', function (req, res) {
-  res.render('index', {book: null, error: null})
+  res.render('index', {isISBN: null, book: null, error: null})
 });
 
 app.get('/addBook', function (req, res) {
@@ -32,19 +32,17 @@ app.post('/', function (req, res) {
   })
     .then(response => {
       if (response.ok) {
-        return response.json()
+        return response.json();
       } else {
-        res.render('index', {book: null, error: 'Error: Libro no encontrado!'});
+        res.render('index', {isISBN: null, book: null, error: 'Error: Libro no encontrado!'});
       }
     })
     .then(data => {
       console.log(data)
       if(isISBN){
-        let bookInfo = `El libro \"${data.title}\" ha sido escrito por \"${data.author}\".`
-        res.render('index', {book: bookInfo, error: null})
+        res.render('index', {isISBN: isISBN, book: data, error: null})
       }else{
-        let bookInfo = `El libro \"${data[0].title}\" ha sido escrito por \"${data[0].author}\".`
-        res.render('index', {book: bookInfo, error: null})
+        res.render('index', {isISBN: isISBN, book: data, error: null})
       }
     })
     .catch(error => console.log('error is', error));
