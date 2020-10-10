@@ -78,58 +78,46 @@
     <div class="container2">
       <!-- Si han hecho la busqueda mediante ISBN -->
       <% if(isISBN !== null && isISBN) {%>
-      <div class="content">
-        <h3>ISBN</h3>
-        <p><%= book.ISBN %></p>
-      </div>
-
-      <div class="content">
-        <h3>Title</h3>
-        <p><%= book.title %></p>
-      </div>
-
-      <div class="content">
-        <h3>Author</h3>
-        <p><%= book.author %></p>
-      </div>
-
-      <div class="content">
-        <h3>Edition</h3>
-        <p><%= book.edition %></p>
-      </div>
-
-      <div class="content">
-        <h3>Publisher</h3>
-        <p><%= book.publisher %></p>
-      </div>
+      <table>
+        <tr>
+          <th>Pic: </th>
+          <th>ISBN: </th>
+          <th>Title: </th>
+          <th>Author: </th>
+          <th>Edition: </th>
+          <th>Publisher: </th>
+        </tr>
+        <tr>
+          <td><%= book.ISBN%></td>
+          <td><%= book.title%></td>
+          <td><%= book.author%></td>
+          <td><%= book.edition%></td>
+          <td><%= book.publisher%></td>
+        </tr>
+      </table>
       <% } else {%>
       <!-- Si han hecho la busqueda mediante Titulo -->
       <% for(pointer in book){ %>
 
-      <div class="content">
-        <h3>ISBN</h3>
-        <p><%= book[pointer].ISBN %></p>
-      </div>
+      <table>
+        <tr>
+          <th>Pic: </th>
+          <th>ISBN: </th>
+          <th>Title: </th>
+          <th>Author: </th>
+          <th>Edition: </th>
+          <th>Publisher: </th>
+        </tr>
 
-      <div class="content">
-        <h3>Title</h3>
-        <p><%= book[pointer].title %></p>
-      </div>
-
-      <div class="content">
-        <h3>Author</h3>
-        <p><%= book[pointer].author %></p>
-      </div>
-
-      <div class="content">
-        <h3>Edition</h3>
-        <p><%= book[pointer].edition %></p>
-      </div>
-
-      <div class="content">
-        <h3>Publisher</h3>
-        <p><%= book[pointer].publisher %></p>
-      </div>
+        <tr>
+          <td></td><img src="img/default_img.png" alt="Foto por Defecto" width="10%"></td>
+          <td><%= book[pointer].ISBN %></td>
+          <td><%= book[pointer].title %></td>
+          <td><%= book[pointer].author %></td>
+          <td><%= book[pointer].edition %></td>
+          <td><%= book[pointer].publisher %></td>
+        </tr>
+      </table>
 
       <% } // Fin del for%>
       <% } // Fin del else%>

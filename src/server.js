@@ -51,10 +51,7 @@ app.post('/', function (req, res) {
 app.post('/addBook', function (req, res) {
 
   let book = req.body.book;
-  let url = 'http://localhost:4000/api/books/add_book';
-
-  isbn_number = parseInt(book[0]);
-  edition_number = parseInt(book[3]);
+  let url = 'http://localhost:4000/api/books/book';
 
   const dataToSend = {
     url: url,
