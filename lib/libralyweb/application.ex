@@ -8,7 +8,7 @@ defmodule Libralyweb.Application do
   def start(_type, _args) do
     children = [
       # Start the Ecto repository
-      Libralyweb.Repo,
+      # Libralyweb.Repo, # Our database is on Github: Alfedi/BOOM
       # Start the Telemetry supervisor
       LibralywebWeb.Telemetry,
       # Start the PubSub system
