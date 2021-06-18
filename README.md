@@ -1,12 +1,20 @@
-# ACM-libraly-web
-(Se que es library, pero hay que mantener la consistencia con las erratas.)  
+# Libralyweb
 
-Web app para manejar la biblioteca de ACM. (Mostrar todos los libros, mostrar los libros disponibles, añadir nuevos libros, eliminar libros...)
+To start your Phoenix server:
 
-# Instalación y Ejecución
-(Dando por hecho que se tiene `nodejs` instalado.)  
-Tras clonar el repo ejecutar `npm install` y luego `cd src` y `npm server.js`. Luego abre tu buscador de confianza aka firefox :3 y el server esta en `localhost:3000`. No podras buscar ningun lisbro por que para ello necesitas el repo de `Alfedi/BOOM` ejecutando en la misma máquina :3 (en un futuro dare mas detalles de como montarlo todo :D)
+  * Install dependencies with `mix deps.get`
+  * Create and migrate your database with `mix ecto.setup`
+  * Install Node.js dependencies with `npm install` inside the `assets` directory
+  * Start Phoenix endpoint with `mix phx.server`
 
-# Foticos
-![Inicio](./readmeIMG/inicio.png)  
-![Buscar Libro](./readmeIMG/resultado_libro.png)
+Now you can visit [`localhost:4000`](http://localhost:4000) from your browser.
+
+Ready to run in production? Please [check our deployment guides](https://hexdocs.pm/phoenix/deployment.html).
+
+## Learn more
+
+  * Official website: https://www.phoenixframework.org/
+  * Guides: https://hexdocs.pm/phoenix/overview.html
+  * Docs: https://hexdocs.pm/phoenix
+  * Forum: https://elixirforum.com/c/phoenix-forum
+  * Source: https://github.com/phoenixframework/phoenix
