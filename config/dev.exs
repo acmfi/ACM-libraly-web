@@ -4,7 +4,7 @@ use Mix.Config
 config :libralyweb, Libralyweb.Repo,
   username: "postgres",
   password: "postgres",
-  database: "libralyweb_dev",
+  database: "boomdb",
   hostname: "localhost",
   show_sensitive_data_on_connection_error: true,
   pool_size: 10
