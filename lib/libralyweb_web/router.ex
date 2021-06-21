@@ -16,16 +16,19 @@ defmodule LibralywebWeb.Router do
   scope "/", LibralywebWeb do
     pipe_through :browser
 
-    get("/", PageController, :index)
-
-    # This is from Alfedi/BOOM repo, we may not need it
-    # post("/", BookController, :add_book)
-    # get("/", BookController, :get_books)
-    # get("/:id", BookController, :get_book)
-    # delete("/:id", BookController, :remove_book)
-    # put("/:id", BookController, :edit_book)
+    get("/", BookController, :index)
 
   end
+
+  # scope "/api/books", LibralywebWeb do
+  #   pipe_through :api
+
+  #   post("/", BookController, :add_book)
+  #   get("/", BookController, :get_books)
+  #   get("/:id", BookController, :get_book)
+  #   delete("/:id", BookController, :remove_book)
+  #   put("/:id", BookController, :edit_book)
+  # end
 
   # Other scopes may use custom stacks.
   # scope "/api", LibralywebWeb do

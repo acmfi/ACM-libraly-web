@@ -1,0 +1,28 @@
+<form>
+  <fieldset>
+    <label for="search">¿Qué quieres buscar?</label>
+    <div class="user-search-input">
+      <input type="text" placeholder="Titulo, Autor, ISBN" id="search">
+    </div>
+    <div class="search-button">
+      <input class="button-primary" type="submit" value="Send">
+    </div>
+    <div class="clearfix"></div>
+  </fieldset>
+</form>
+
+<section class="">
+  <table>
+    <tr>
+      <th>Title</th>
+      <th>Author</th>
+    </tr>
+    <%= for book <- @books do %>
+      <tr>
+        <td><%= book.title %></td>
+        <td><%= book.author %></td>
+      </tr>
+    <% end %>
+  </table>
+</section>
+

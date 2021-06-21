@@ -8,6 +8,16 @@ defmodule LibralywebWeb.BookController do
   alias LibralywebWeb.BooksView
   alias Libralyweb.Book
 
+  def index(conn, params) do
+    filters = parse_filters(params)
+    limit = parse_limit(params["limit"])
+
+    case Book.get_books(params["cursor"], filters, limit) do
+      {:ok, book_list, cursors} ->
+        render(conn, "index.html", books: book_list)
+    end
+  end
+
   def add_book(conn, %{
         "ISBN" => id,
         "title" => title,
