@@ -1,3 +1,9 @@
+# Important CONTRIBUTORS
+
+* [Alfedi/BOOM](https://github.com/Alfedi/BOOM): Book manager with database.
+
+
+
 # Libralyweb
 
 To start your Phoenix server:
